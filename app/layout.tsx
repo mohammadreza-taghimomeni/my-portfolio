@@ -18,8 +18,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-   title: "Reza Taghimomeni - Senior Frontend Developer",
-   description: "Reza Taghimomeni's personal portfolio website.",
+   title: "Reza Momeni - Senior Frontend Developer",
+   description: "Reza Momeni's personal portfolio website.",
 };
 
 export default function RootLayout({

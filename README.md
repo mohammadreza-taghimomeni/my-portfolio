@@ -1,4 +1,4 @@
-# Reza Taghimomeni - Senior Frontend Developer Portfolio
+# Reza Momeni - Senior Frontend Developer Portfolio
 
 A high-performance, professional portfolio website built with the latest web technologies. This project showcases technical excellence, design precision, and business value through a modern, responsive interface.
 
