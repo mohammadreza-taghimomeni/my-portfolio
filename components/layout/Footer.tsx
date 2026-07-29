@@ -2,7 +2,7 @@ import React from "react";
 import resumeData from "@/data/resume.json";
 
 const Footer = () => {
-   const { name, github, linkedin, twitter, email } = resumeData.personalInfo;
+   const { name, github, linkedin, email } = resumeData.personalInfo;
 
    return (
       <footer className="border-t border-zinc-200 dark:border-zinc-800 py-10 px-6 print:hidden bg-white dark:bg-black transition-colors">
@@ -27,14 +27,6 @@ const Footer = () => {
                   className="text-zinc-500 dark:text-zinc-400 hover:text-primary dark:hover:text-primary text-sm transition-colors"
                >
                   LinkedIn
-               </a>
-               <a
-                  href={twitter}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-zinc-500 dark:text-zinc-400 hover:text-primary dark:hover:text-primary text-sm transition-colors"
-               >
-                  Twitter
                </a>
                <a
                   href={`mailto:${email}`}

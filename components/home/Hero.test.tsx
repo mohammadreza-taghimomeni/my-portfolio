@@ -20,7 +20,6 @@ vi.mock('@/data/resume.json', () => ({
     personalInfo: {
       linkedin: "https://linkedin.com",
       github: "https://github.com",
-      twitter: "https://twitter.com"
     }
   }
 }));

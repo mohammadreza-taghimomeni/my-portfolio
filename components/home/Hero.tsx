@@ -1,7 +1,7 @@
 "use client";
 
 import { m, Variants } from "framer-motion";
-import { ArrowRight, Github, Linkedin, Twitter } from "lucide-react";
+import { ArrowRight, Github, Linkedin } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import homeData from "@/data/home.json";
@@ -20,7 +20,7 @@ const Hero = () => {
       return () => window.removeEventListener("resize", checkMobile);
    }, []);
 
-   const { linkedin, github, twitter } = resumeData.personalInfo;
+   const { linkedin, github } = resumeData.personalInfo;
 
    const containerVariants: Variants = {
       visible: {
@@ -139,14 +139,6 @@ const Hero = () => {
                            className="text-zinc-400 hover:text-primary transition-colors"
                         >
                            <Github className="w-6 h-6" />
-                        </a>
-                        <a
-                           href={twitter}
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           className="text-zinc-400 hover:text-primary transition-colors"
-                        >
-                           <Twitter className="w-6 h-6" />
                         </a>
                      </div>
                   </m.div>

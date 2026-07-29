@@ -8,7 +8,6 @@ export interface PersonalInfo {
    location: string;
    linkedin: string;
    github: string;
-   twitter: string;
    image: string;
 }
 
