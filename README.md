@@ -107,6 +107,4 @@ The portfolio content is easily customizable through the JSON files in the `data
 - `projects.json`: All project metadata, highlights, and gallery items.
 - `resume.json`: Experience, education, and skills.
 
-## 📄 License
 
-This project is private and intended for portfolio demonstration purposes.
