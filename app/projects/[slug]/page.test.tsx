@@ -10,10 +10,7 @@ vi.mock('next/navigation', () => ({
 }));
 
 vi.mock('next/dynamic', () => ({
-  default: (fn: any) => {
-    if (typeof fn === 'function') fn();
-    return (props: any) => <div data-testid="dynamic-component">{JSON.stringify(props)}</div>;
-  },
+  default: () => (props: any) => <div data-testid="dynamic-component">{JSON.stringify(props)}</div>,
 }));
 
 vi.mock('@/data/projects.json', () => ({

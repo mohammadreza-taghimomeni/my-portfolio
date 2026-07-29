@@ -3,10 +3,7 @@ import Home from './page';
 import { expect, test, vi } from 'vitest';
 
 vi.mock('next/dynamic', () => ({
-  default: (fn: any) => {
-    if (typeof fn === 'function') fn();
-    return () => <div data-testid="dynamic-component" />;
-  },
+  default: () => () => <div data-testid="dynamic-component" />,
 }));
 
 vi.mock('@/components/home/Hero', () => ({

@@ -1,6 +1,18 @@
 import { render, screen, fireEvent, act } from '@testing-library/react';
 import Header from './Header';
-import { expect, test, vi } from 'vitest';
+import { expect, test, vi, beforeEach, afterEach } from 'vitest';
+
+let consoleWarnSpy: ReturnType<typeof vi.spyOn>;
+
+beforeEach(() => {
+  // Suppress jsdom's "Not implemented: navigation to another Document" warning
+  // that occurs when clicking navigation links in tests.
+  consoleWarnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+});
+
+afterEach(() => {
+  consoleWarnSpy?.mockRestore();
+});
 
 vi.mock('next/navigation', () => ({
   usePathname: () => '/'

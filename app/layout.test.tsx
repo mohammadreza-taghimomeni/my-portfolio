@@ -1,6 +1,18 @@
 import { render, screen } from '@testing-library/react';
 import RootLayout from './layout';
-import { expect, test, vi } from 'vitest';
+import { expect, test, vi, beforeEach, afterEach } from 'vitest';
+
+let consoleSpy: ReturnType<typeof vi.spyOn>;
+
+beforeEach(() => {
+  // Suppress React's "<html> cannot be a child of <div>" warning
+  // which occurs because render() wraps RootLayout's <html> output in a container div.
+  consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+});
+
+afterEach(() => {
+  consoleSpy?.mockRestore();
+});
 
 vi.mock('next/font/google', () => ({
   Geist: () => ({ variable: '--font-geist-sans' }),

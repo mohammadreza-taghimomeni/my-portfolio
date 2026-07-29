@@ -3,10 +3,7 @@ import ResumePage from './page';
 import { expect, test, vi } from 'vitest';
 
 vi.mock('next/dynamic', () => ({
-  default: (fn: any) => {
-    if (typeof fn === 'function') fn();
-    return (props: any) => <div data-testid="dynamic-component">{JSON.stringify(props)}</div>;
-  },
+  default: () => (props: any) => <div data-testid="dynamic-component">{JSON.stringify(props)}</div>,
 }));
 
 vi.mock('@/data/resume.json', () => ({

@@ -1,12 +1,21 @@
 import { render, screen, act, waitFor } from '@testing-library/react';
 import BlogPage from './page';
-import { expect, test, vi } from 'vitest';
+import { expect, test, vi, beforeEach, afterEach } from 'vitest';
+
+let consoleSpy: ReturnType<typeof vi.spyOn>;
+
+beforeEach(() => {
+  // Suppress the expected "Error fetching posts" console.error
+  // that is deliberately triggered by the fetch rejection test case.
+  consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+});
+
+afterEach(() => {
+  consoleSpy?.mockRestore();
+});
 
 vi.mock('next/dynamic', () => ({
-  default: (fn: any) => {
-    if (typeof fn === 'function') fn();
-    return (props: any) => <div data-testid="dynamic-component">{JSON.stringify(props)}</div>;
-  },
+  default: () => (props: any) => <div data-testid="dynamic-component">{JSON.stringify(props)}</div>,
 }));
 
 const mockPosts = [
