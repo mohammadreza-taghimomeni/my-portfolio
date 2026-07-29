@@ -5,8 +5,8 @@ import { expect, test, vi, beforeEach } from 'vitest';
 vi.mock('@/data/home.json', () => ({
   default: {
     stats: [
-      { label: "Years Experience", value: "8+" },
-      { label: "Projects Delivered", value: "40+" }
+      { label: "Users Served", value: "100K+" },
+      { label: "Years Experience", value: "8+" }
     ]
   }
 }));
