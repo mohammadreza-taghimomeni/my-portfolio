@@ -1,6 +1,6 @@
-import { render, screen, act } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import Stats from './Stats';
-import { expect, test, vi } from 'vitest';
+import { expect, test, vi, beforeEach } from 'vitest';
 
 vi.mock('@/data/home.json', () => ({
   default: {
@@ -11,46 +11,92 @@ vi.mock('@/data/home.json', () => ({
   }
 }));
 
-// Mock framer-motion useInView
+// Shared mock so we can toggle useInView per test.
+// vi.hoisted() ensures the variable is initialized before vi.mock factories run.
+const mockUseInView = vi.hoisted(() => vi.fn());
+
 vi.mock('framer-motion', async () => {
   const actual = await vi.importActual('framer-motion');
   return {
     ...actual,
-    useInView: vi.fn().mockReturnValue(true),
+    useInView: mockUseInView,
   };
 });
 
-test('Stats renders stat items and animates', async () => {
-  vi.useFakeTimers();
+beforeEach(() => {
+  mockUseInView.mockReset();
 
-  // Mock requestAnimationFrame
-  let rafCallback: FrameRequestCallback | null = null;
-  vi.spyOn(window, 'requestAnimationFrame').mockImplementation((cb) => {
-    rafCallback = cb;
-    return 1;
+  // Default: reduced motion NOT preferred
+  Object.defineProperty(window, 'matchMedia', {
+    writable: true,
+    value: vi.fn().mockImplementation((query: string) => ({
+      matches: false,
+      media: query,
+      onchange: null,
+      addListener: vi.fn(),
+      removeListener: vi.fn(),
+      addEventListener: vi.fn(),
+      removeEventListener: vi.fn(),
+      dispatchEvent: vi.fn(),
+    })),
   });
+});
+
+test('Stats renders final values immediately when not in view (SSR behavior)', () => {
+  mockUseInView.mockReturnValue(false);
 
   render(<Stats />);
 
   expect(screen.getByText('Years Experience')).toBeDefined();
   expect(screen.getByText('Projects Delivered')).toBeDefined();
 
-  // Initially values might be 0
-  expect(screen.getAllByText('0+').length).toBe(2);
+  // SSR-friendly: final values are rendered immediately, never 0
+  expect(screen.getByText('8+')).toBeDefined();
+  expect(screen.getByText('40+')).toBeDefined();
+  expect(screen.queryByText('0+')).toBeNull();
+});
 
-  // Trigger RAF callback
-  if (rafCallback) {
-    await act(async () => {
-      (rafCallback as any)(600); // Advance to end of duration
-    });
-  }
+test('Stats schedules count-up animation when entering viewport', () => {
+  mockUseInView.mockReturnValue(true);
 
-  // Advance timers to trigger state updates
-  vi.advanceTimersByTime(600);
+  let rafCalled = false;
+  vi.spyOn(window, 'requestAnimationFrame').mockImplementation((_cb) => {
+    rafCalled = true;
+    return 1;
+  });
 
-  // After animation it should show final values
-  expect(screen.queryByText('8+')).toBeDefined();
-  expect(screen.queryByText('40+')).toBeDefined();
+  render(<Stats />);
 
-  vi.useRealTimers();
+  // The animation effect should have scheduled a RAF callback
+  expect(rafCalled).toBe(true);
+
+  // Still never shows zero (initial SSR value persists until RAF fires)
+  expect(screen.queryByText('0+')).toBeNull();
+});
+
+test('Stats respects reduced-motion preference and shows final values', () => {
+  mockUseInView.mockReturnValue(true);
+
+  // Override matchMedia to signal reduced motion
+  Object.defineProperty(window, 'matchMedia', {
+    writable: true,
+    value: vi.fn().mockImplementation((query: string) => ({
+      matches: true, // reduced motion preferred
+      media: query,
+      onchange: null,
+      addListener: vi.fn(),
+      removeListener: vi.fn(),
+      addEventListener: vi.fn(),
+      removeEventListener: vi.fn(),
+      dispatchEvent: vi.fn(),
+    })),
+  });
+
+  render(<Stats />);
+
+  // Final values are displayed without animation (effect skips due to
+  // reduced motion, so displayValue stays at finalValue)
+  expect(screen.getByText('8+')).toBeDefined();
+  expect(screen.getByText('40+')).toBeDefined();
+  expect(screen.queryByText('0+')).toBeNull();
 });
