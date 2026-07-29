@@ -115,7 +115,7 @@ const Hero = () => {
                         </m.div>
 
                         <Link
-                           href="/my-resume"
+                           href="/my-portfolio"
                            className="relative group bg-primary text-primary-foreground px-10 py-5 rounded-full text-xl font-bold flex items-center gap-3 hover:opacity-90 transition-all hover:scale-105 shadow-xl shadow-primary/25 active:scale-95 z-10"
                         >
                            {hero.cta}
