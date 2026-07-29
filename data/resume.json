@@ -29,6 +29,7 @@
             "React",
             "Zustand",
             "React Query",
+            "Playwright",
             "Docker",
             "CI/CD",
             "IndexedDB"
@@ -133,6 +134,7 @@
          "variant": "secondary",
          "items": [
             "TDD (Test-Driven Development)",
+            "Playwright (E2E Testing)",
             "Jest & React Testing Library",
             "Storybook (UI Documentation)",
             "Sentry (Error Monitoring)",

@@ -21,6 +21,7 @@
          "Electron",
          "Zustand",
          "WebSockets",
+         "Playwright",
          "TypeScript",
          "ASP.NET Core",
          "PostgreSQL",
