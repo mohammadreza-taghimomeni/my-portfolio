@@ -6,7 +6,9 @@ vi.mock('@/data/home.json', () => ({
   default: {
     stats: [
       { label: "Users Served", value: "100K+" },
-      { label: "Years Experience", value: "8+" }
+      { label: "Faster Data Fetch", value: "40%" },
+      { label: "Legacy Apps Modernized", value: "4+" },
+      { label: "Engineers Led", value: "15+" }
     ]
   }
 }));
@@ -47,12 +49,13 @@ test('Stats renders final values immediately when not in view (SSR behavior)', (
 
   render(<Stats />);
 
-  expect(screen.getByText('Years Experience')).toBeDefined();
-  expect(screen.getByText('Projects Delivered')).toBeDefined();
+  expect(screen.getByText('Users Served')).toBeDefined();
+  expect(screen.getByText('Legacy Apps Modernized')).toBeDefined();
 
   // SSR-friendly: final values are rendered immediately, never 0
-  expect(screen.getByText('8+')).toBeDefined();
-  expect(screen.getByText('40+')).toBeDefined();
+  expect(screen.getByText('100K+')).toBeDefined();
+  expect(screen.getByText('4+')).toBeDefined();
+  expect(screen.getByText('40%')).toBeDefined();
   expect(screen.queryByText('0+')).toBeNull();
 });
 
@@ -96,7 +99,7 @@ test('Stats respects reduced-motion preference and shows final values', () => {
 
   // Final values are displayed without animation (effect skips due to
   // reduced motion, so displayValue stays at finalValue)
-  expect(screen.getByText('8+')).toBeDefined();
-  expect(screen.getByText('40+')).toBeDefined();
+  expect(screen.getByText('100K+')).toBeDefined();
+  expect(screen.getByText('15+')).toBeDefined();
   expect(screen.queryByText('0+')).toBeNull();
 });

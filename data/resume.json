@@ -1,195 +1,217 @@
 {
-  "personalInfo": {
-    "name": "Reza Momeni",
-    "role": "Senior Frontend Engineer",
-    "bio": "Senior Frontend Engineer with 8+ years of experience specializing in React, Next.js, and Vue.js.",
-    "aboutMe": "Senior Frontend Engineer with 8+ years of experience specializing in React, Next.js, and Vue.js. Led technical architecture for a 8+ engineer team at Nexus, scaling enterprise messaging solutions to support 30,000+ active users. Expert in Micro-Frontends and CI/CD optimization, with a focus on delivering high-performance, accessible web infrastructures that align technical velocity with business growth.",
-    "email": "reza.t.momeni@outlook.com",
-    "phone": "+98 913 698 3056",
-    "location": "Isfahan, Iran (Open to Relocate)",
-    "linkedin": "https://www.linkedin.com/in/rezamomeni-dev",
-    "github": "https://github.com/rezamomeni-dev",
-    "image": "/images/my-image.png"
-  },
-  "experience": [
-    {
-      "role": "Senior Frontend Engineer",
-      "company": "Nexus",
-      "location": "Isfahan, Iran",
-      "period": "Apr 2023 — Present",
-      "description": [
-        "Spearheaded the re-architecture of the core messaging platform utilizing Zustand, React Query, and IndexedDB; built an offline-first capability that reduced data fetch latency by 40%.",
-        "Managed and mentored a diverse team of 8+ engineers, implementing tailored development plans that increased team velocity by 35%.",
-        "Established 25+ CI/CD pipelines and Dockerized micro-services, reducing build failures by 60%.",
-        "Orchestrated the development of an enterprise-grade ticketing system, decreasing internal email volume by 60% through real-time chat integration.",
-        "Championed the adoption of Clean Architecture and reusable design systems, accelerating onboarding time by 30%."
-      ],
-      "technologies": [
-        "React",
-        "Zustand",
-        "React Query",
-        "Playwright",
-        "Docker",
-        "CI/CD",
-        "IndexedDB"
-      ]
-    },
-    {
-      "role": "Frontend Developer",
-      "company": "Kasra",
-      "location": "Isfahan, Iran",
-      "period": "Apr 2018 — May 2023",
-      "description": [
-        "Engineered a suite of 10+ mission-critical admin dashboards using React and Angular, supporting workforce management for over 30,000 global users.",
-        "Optimized frontend infrastructure through strategic code-splitting, boosting initial load speeds by 25% and achieving 'Green' status in Core Web Vitals.",
-        "Pioneered a GEO-fence attendance module using Leaflet and Mapbox, resulting in a 30% increase in user adoption.",
-        "Facilitated Agile transformation for 5+ years, instituting rigorous code review protocols and unit testing (Jest/RTL) that mitigated post-deployment bugs by 20%.",
-        "Modernized legacy systems by migrating monolithic structures to Redux Toolkit and TypeScript."
-      ],
-      "technologies": [
-        "React",
-        "Angular",
-        "Redux Toolkit",
-        "TypeScript",
-        "Leaflet",
-        "Jest"
-      ]
-    }
-  ],
-  "education": [
-    {
-      "institution": "University of Isfahan",
-      "degree": "Bachelor of Science in Computer Engineering",
-      "period": "2014 — 2018",
-      "location": "Isfahan, Iran",
-      "details": "Capstone Project: Implementation of a real-time autoclave monitoring system focusing on IoT data visualization."
-    }
-  ],
-  "certificates": [
-    {
-      "title": "Responsive Web Design",
-      "organization": "freeCodeCamp",
-      "date": "Mar 2026",
-      "credentialId": "reza-momeni-rwdv9",
-      "credentialUrl": "https://www.freecodecamp.org/certification/reza-momeni/responsive-web-design-v9",
-      "skills": ["JavaScript", "HTML", "Cascading Style Sheets (CSS)"]
-    },
-    {
-      "title": "AI-Powered AB Testing",
-      "organization": "Sololearn",
-      "date": "Feb 2026",
-      "credentialId": "CC-7Q02IAQE",
-      "credentialUrl": "https://www.sololearn.com/certificates/CC-7Q02IAQE",
-      "skills": ["A/B Testing"]
-    }
-  ],
-  "skills": [
-    {
-      "id": "core-tech",
-      "title": "Core Frontend & Languages",
-      "priority": 1,
-      "variant": "primary",
-      "items": [
-        "React.js (Advanced)",
-        "Next.js (App Router, SSR)",
-        "TypeScript (Strict Typing)",
-        "Vue.js (Composition API)",
-        "JavaScript (ES6+)",
-        "HTML5 / CSS3 / SCSS"
-      ]
-    },
-    {
-      "id": "architecture",
-      "title": "Architecture & Scalability",
-      "priority": 2,
-      "variant": "primary",
-      "items": [
-        "Micro-Frontends (Module Federation)",
-        "Clean Architecture",
-        "SOLID Principles",
-        "Domain-Driven Design (DDD)",
-        "Design Systems",
-        "Scalable Application Structure"
-      ]
-    },
-    {
-      "id": "state-async",
-      "title": "State Management & Async Data",
-      "priority": 3,
-      "variant": "primary",
-      "items": [
-        "TanStack Query (React Query)",
-        "Zustand",
-        "Redux Toolkit",
-        "Context API",
-        "Restful APIs",
-        "GraphQL"
-      ]
-    },
-    {
-      "id": "quality-testing",
-      "title": "Quality Engineering & Testing",
-      "priority": 4,
-      "variant": "secondary",
-      "items": [
-        "TDD (Test-Driven Development)",
-        "Playwright (E2E Testing)",
-        "Jest & React Testing Library",
-        "Storybook (UI Documentation)",
-        "Sentry (Error Monitoring)",
-        "Code Review & Best Practices"
-      ]
-    },
-    {
-      "id": "devops-tooling",
-      "title": "Build Tools & DevOps",
-      "priority": 5,
-      "variant": "secondary",
-      "items": [
-        "Docker & Containerization",
-        "CI/CD Pipelines (GitHub Actions, Jenkins)",
-        "Vite",
-        "Webpack",
-        "Git & Gitflow Workflow",
-        "NPM / Yarn / PNPM"
-      ]
-    },
-    {
-      "id": "ui-styling",
-      "title": "UI Engineering",
-      "priority": 6,
-      "variant": "secondary",
-      "items": [
-        "Tailwind CSS",
-        "Material UI (MUI)",
-        "Ant Design",
-        "Styled Components",
-        "Responsive & Accessible Design (a11y)"
-      ]
-    },
-    {
-      "id": "backend-integration",
-      "title": "Backend Exposure",
-      "priority": 7,
-      "variant": "secondary",
-      "items": [
-        "ASP.NET Core",
-        "C#",
-        "SQL Server",
-        "WebSocket (Real-time Communication)"
-      ]
-    },
-    {
-      "id": "specialized-tools",
-      "title": "Specialized & Productivity",
-      "priority": 8,
-      "variant": "secondary",
-      "items": [
-        "Agile / Scrum / Kanban",
-        "Mapbox & Leaflet (GIS)",
-        "Shopify",
-        "AI-Assisted Dev (Copilot, Gemini)"
-      ]
-    }
-  ]
+   "personalInfo": {
+      "name": "Reza Momeni",
+      "role": "Senior Frontend Developer",
+      "bio": "Senior Frontend Developer with 8+ years of experience in React, Next.js, Vue and TypeScript, all in B2B SaaS.",
+      "aboutMe": "Senior Frontend Developer with 8+ years of experience in React, Next.js, Vue and TypeScript, all in B2B SaaS. Core strengths are micro-frontend architecture, web performance, testing at scale and reusable design systems. At Nexus I own the frontend architecture of an enterprise collaboration suite — chat, calendar, video meetings, tasks, tickets and AI meeting recaps — serving 30,000+ active users, and I set the frontend standards and code-review practice adopted across the company's ~15 frontend engineers. Measured outcomes include a 40% reduction in data-fetch latency, 60% fewer build failures across 25+ CI/CD pipelines, and Core Web Vitals 'Green' with 25% faster initial load.",
+      "email": "reza.t.momeni@outlook.com",
+      "phone": "+98 913 698 3056",
+      "location": "Isfahan, Iran — open to relocation",
+      "linkedin": "https://www.linkedin.com/in/rezamomeni-dev",
+      "github": "https://github.com/rezamomeni-dev",
+      "image": "/images/profile-photo.png"
+   },
+   "experience": [
+      {
+         "role": "Senior Frontend Developer",
+         "company": "Nexus",
+         "location": "Isfahan, Iran",
+         "period": "Apr 2023 — Present",
+         "description": [
+            "Owned the frontend architecture for the rebuild of an enterprise collaboration suite — chat, calendar, video meetings, tasks, tickets and AI meeting recaps — serving 30,000+ active users, introducing Zustand, React Query and IndexedDB for offline-first behaviour; data-fetch latency fell 40%.",
+            "Split the product into a Module Federation micro-frontend estate of 6+ independent modules, trimming average deploy time by 30% and removing cross-team release dependencies.",
+            "Cut the regression cycle by 30% with the company's first end-to-end test suite in Playwright, written against user stories, and held unit coverage above 60% with Jest and React Testing Library.",
+            "Set up 25+ CI/CD pipelines and containerised services with Docker, dropping build failures by 60%.",
+            "Built the AI meeting-recap experience — a post-meeting summary page distributed to attendees by link — now producing 300+ recaps per month.",
+            "Set the frontend standards and code-review practice adopted across the company's ~15 frontend engineers, and ran weekly sessions on advanced React patterns and AI tooling; team velocity grew 35%."
+         ],
+         "technologies": [
+            "React",
+            "Next.js",
+            "TypeScript",
+            "Feature Slice Design",
+            "Zustand",
+            "TanStack Query",
+            "Module Federation",
+            "IndexedDB",
+            "WebSocket",
+            "Redux Toolkit",
+            "Playwright",
+            "Jest",
+            "Docker",
+            "CI/CD"
+         ]
+      },
+      {
+         "role": "Frontend Developer",
+         "company": "Kasra",
+         "location": "Isfahan, Iran",
+         "period": "Apr 2018 — May 2023",
+         "description": [
+            "Migrated 4+ legacy applications off classic ASP.NET inside the .NET MVC host — 3+ Razor projects to Angular single-page applications (payroll, work-calendar) and one jQuery/Razor frontend to React — cutting screen-development time and enabling client-side computation the Razor stack could not support.",
+            "Built 10+ mission-critical admin dashboards in React and Angular for a workforce-management platform serving 100,000+ users.",
+            "Improved initial page load by 25% and reached Core Web Vitals 'Green' by auditing bundle composition to isolate the heaviest render-blocking dependencies, then code-splitting the routes.",
+            "Traced 58% of defects to untyped shared state, then migrated the monolithic frontend to TypeScript and Redux Toolkit to eliminate that defect class, cutting new-engineer onboarding by 2 weeks.",
+            "Built a geofenced attendance module with Leaflet and Mapbox, lifting use of location-aware features by 30%.",
+            "Reduced post-release defects by 20% across a product used by 3,000+ enterprise clients by putting structured code review and Jest unit testing in place."
+         ],
+         "technologies": [
+            "React",
+            "Angular",
+            "TypeScript",
+            "Redux Toolkit",
+            "Leaflet",
+            "Mapbox GL JS",
+            "Jest",
+            "SCSS",
+            "ASP.NET Core",
+            "PostgreSQL",
+            "SQL server"
+         ]
+      }
+   ],
+   "education": [
+      {
+         "institution": "University of Isfahan",
+         "degree": "Bachelor of Science in Computer Engineering",
+         "period": "2014 — 2018",
+         "location": "Isfahan, Iran",
+         "details": "Capstone Project: Implementation of a real-time autoclave monitoring system focusing on IoT data visualization."
+      }
+   ],
+   "certificates": [],
+   "skills": [
+      {
+         "id": "core-tech",
+         "title": "Core Frontend & Languages",
+         "priority": 1,
+         "variant": "primary",
+         "items": [
+            "React.js (Advanced)",
+            "Next.js (App Router, SSR)",
+            "TypeScript (Strict Typing)",
+            "Vue.js (Composition API)",
+            "Angular",
+            "JavaScript (ES6+)",
+            "HTML5 / CSS3 / SCSS"
+         ]
+      },
+      {
+         "id": "architecture",
+         "title": "Architecture & Scalability",
+         "priority": 2,
+         "variant": "primary",
+         "items": [
+            "Feature Slice Design",
+            "Micro-Frontends (Module Federation)",
+            "Clean Architecture",
+            "SOLID Principles",
+            "Domain-Driven Design (DDD)",
+            "Design Systems",
+            "Scalable Application Structure",
+            "Legacy Modernization (ASP.NET Razor to React / Angular)"
+         ]
+      },
+      {
+         "id": "state-async",
+         "title": "State Management & Async Data",
+         "priority": 3,
+         "variant": "primary",
+         "items": [
+            "TanStack Query (React Query)",
+            "Zustand",
+            "Redux Toolkit",
+            "Context API",
+            "RESTful APIs",
+            "GraphQL",
+            "IndexedDB (Offline-first)"
+         ]
+      },
+      {
+         "id": "quality-testing",
+         "title": "Quality Engineering & Testing",
+         "priority": 4,
+         "variant": "secondary",
+         "items": [
+            "TDD (Test-Driven Development)",
+            "Playwright (E2E Testing)",
+            "Jest & React Testing Library",
+            "Vitest",
+            "Storybook (UI Documentation)",
+            "Core Web Vitals",
+            "Accessibility (WCAG)",
+            "Sentry (Error Monitoring)",
+            "Code Review & Best Practices"
+         ]
+      },
+      {
+         "id": "devops-tooling",
+         "title": "Build Tools & DevOps",
+         "priority": 5,
+         "variant": "secondary",
+         "items": [
+            "Docker & Containerization",
+            "CI/CD Pipelines (GitHub Actions, Jenkins)",
+            "Vite",
+            "Webpack",
+            "Git & Gitflow Workflow",
+            "NPM / Yarn / PNPM (workspaces)"
+         ]
+      },
+      {
+         "id": "ui-styling",
+         "title": "UI Engineering",
+         "priority": 6,
+         "variant": "secondary",
+         "items": [
+            "Tailwind CSS",
+            "Material UI (MUI)",
+            "Ant Design",
+            "Radix UI (shadcn/ui)",
+            "Styled Components",
+            "Responsive & Accessible Design (a11y)"
+         ]
+      },
+      {
+         "id": "realtime-integrations",
+         "title": "Real-time & Integrations",
+         "priority": 7,
+         "variant": "secondary",
+         "items": [
+            "WebSocket (socket-based real-time)",
+            "SignalR (ASP.NET real-time push)",
+            "Jitsi (integration & customization)",
+            "Mapbox GL JS & Leaflet (GIS)"
+         ]
+      },
+      {
+         "id": "backend-integration",
+         "title": "Backend Exposure",
+         "priority": 8,
+         "variant": "secondary",
+         "items": ["ASP.NET Core", "C#", "SQL Server"]
+      },
+      {
+         "id": "specialized-tools",
+         "title": "Specialized & Productivity",
+         "priority": 9,
+         "variant": "secondary",
+         "items": [
+            "Agile / Scrum / Kanban",
+            "Electron",
+            "Shopify",
+            "AI-Assisted Dev (Copilot, Cursor, Claude, Gemini)"
+         ]
+      },
+      {
+         "id": "languages",
+         "title": "Languages",
+         "priority": 10,
+         "variant": "secondary",
+         "items": [
+            "English — Professional working proficiency (C1)",
+            "Persian — Native"
+         ]
+      }
+   ]
 }

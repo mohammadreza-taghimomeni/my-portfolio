@@ -3,7 +3,7 @@ import projectsData from "@/data/projects.json";
 import { Metadata } from "next";
 import dynamic from "next/dynamic";
 import { useMemo } from "react";
-import { SkillCategory } from "@/types/resume";
+import { CertificateItem, SkillCategory } from "@/types/resume";
 
 const Hero = dynamic(() => import("@/components/resume/Hero"));
 const About = dynamic(() => import("@/components/resume/About"));
@@ -30,6 +30,11 @@ export default function ResumePage() {
       return sortedSkills as SkillCategory[];
    }, []);
 
+   // Beginner-level certificates were removed deliberately: next to "8+ years of
+   // experience" they subtract credibility rather than add it. The section is
+   // rendered only if the list is ever repopulated.
+   const certificates = resumeData.certificates as CertificateItem[];
+
    return (
       <div className="selection:bg-primary selection:text-primary-foreground font-sans transition-colors duration-300 relative">
          <BackgroundBlobs />
@@ -50,7 +55,7 @@ export default function ResumePage() {
 
          <Education items={resumeData.education} />
 
-         <Certificates items={resumeData.certificates} />
+         {certificates.length > 0 && <Certificates items={certificates} />}
 
          <Skills categories={skills} />
       </div>

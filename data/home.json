@@ -1,8 +1,8 @@
 {
    "hero": {
-      "badge": "Open to Relocate & Remote Roles",
+      "badge": "Open to Relocation — Netherlands · Germany · Austria",
       "headline": "Engineering <span class=\"text-primary italic\">Scalable</span> Frontend Solutions",
-      "subheadline": "Senior Frontend Engineer with 8+ years of experience. I help ambitious companies build high-performance, accessible, and maintainable web applications using React, Next.js, and Modern Architecture.",
+      "subheadline": "Senior Frontend Developer with 8+ years of experience, all in B2B SaaS. I help ambitious companies build high-performance, accessible and maintainable web applications using React, Next.js, Vue and micro-frontend architecture.",
       "cta": "View My Portfolio",
       "image": "/images/home-banner.png"
    },
@@ -12,8 +12,8 @@
          "value": "100K+"
       },
       {
-         "label": "Legacy Apps Modernized",
-         "value": "40+"
+         "label": "Launched Apps",
+         "value": "50+"
       },
       {
          "label": "Engineers Led",
@@ -30,19 +30,19 @@
       "items": [
          {
             "title": "Scalable Architecture",
-            "description": "Architecting robust frontend foundations using Micro-Frontends and Clean Architecture to support long-term growth."
+            "description": "Architecting robust frontend foundations using Micro-Frontends and Module Federation — at Nexus, 6+ independently deployable modules that cut average deploy time by 30%."
          },
          {
             "title": "Performance Engineering",
-            "description": "Optimizing Core Web Vitals, reducing bundle sizes, and implementing advanced caching for lightning-fast user experiences."
-         },
-         {
-            "title": "Design Systems & UI",
-            "description": "Building consistent, accessible (a11y), and documented component libraries (Storybook) that accelerate team velocity."
+            "description": "Optimizing Core Web Vitals, auditing bundle composition and code-splitting routes — 25% faster initial load at Kasra, 40% lower data-fetch latency at Nexus."
          },
          {
             "title": "Technical Leadership",
             "description": "Mentoring developers, conducting code reviews, and establishing best practices to foster a high-performance engineering culture."
+         },
+         {
+            "title": "Standards & Technical Influence",
+            "description": "Setting frontend standards and code-review practice adopted across ~15 engineers, and running weekly sessions on advanced React patterns and AI tooling."
          }
       ]
    },
@@ -57,7 +57,7 @@
          {
             "name": "Amin Shahnazari",
             "role": "Co-Founder & CTO @ Nexus",
-            "content": "I was particularly impressed by Reza’s ability to handle even the toughest problems. I’ve had the pleasure of knowing Reza for 4 years, during which he led one of our Front-End teams at Kasra. His wide experience in modern technologies helps us in developing enterprise-level products. Any company would be lucky to have Reza as a Senior Engineer."
+            "content": "I was particularly impressed by Reza's ability to handle even the toughest problems. I've had the pleasure of knowing Reza for 4 years, during which he led one of our Front-End teams at Kasra. His wide experience in modern technologies helps us in developing enterprise-level products. Any company would be lucky to have Reza as a Senior Engineer."
          },
          {
             "name": "Mahdi Forghani",
@@ -72,7 +72,7 @@
          {
             "name": "Fatemeh Yousefi",
             "role": "UX Specialist @ adidas",
-            "content": "There is no funnier colleague than Reza, but he is also one of the most dedicated professionals I’ve worked with. He is always willing to go the extra mile to help. His expertise as a developer is considerable. I highly recommend him."
+            "content": "There is no funnier colleague than Reza, but he is also one of the most dedicated professionals I've worked with. He is always willing to go the extra mile to help. His expertise as a developer is considerable. I highly recommend him."
          }
       ]
    },
@@ -81,16 +81,24 @@
       "subtitle": "Insights into my working style and technical philosophy.",
       "items": [
          {
-            "question": "Are you open to relocation or remote work?",
-            "answer": "Yes. I am actively looking for opportunities in Europe and am fully open to relocation. I am also experienced in working effectively in remote/hybrid setups."
+            "question": "Are you open to relocation, and do you need visa sponsorship?",
+            "answer": "Yes to both. I am based in Isfahan, Iran and I am targeting the Netherlands, Germany and Austria, where I would need full visa sponsorship. I say this upfront because it is easier to check early than to discover it late in a process."
+         },
+         {
+            "question": "What kind of role are you looking for?",
+            "answer": "A hands-on senior individual-contributor role — frontend architecture, performance and testing. I currently lead a squad and a frontend chapter, and that experience shapes the technical decisions I make, but I want to keep building rather than move into management."
+         },
+         {
+            "question": "How quickly could you start?",
+            "answer": "My notice period is 2 to 4 weeks, which is short for a senior role. The realistic constraint on a start date is the work-permit timeline rather than my availability."
          },
          {
             "question": "How do you handle performance optimization?",
-            "answer": "I take a data-driven approach: using Lighthouse and performance profilers to identify bottlenecks, then applying techniques like code-splitting, memoization, and server-side rendering to improve metrics."
+            "answer": "I take a data-driven approach: using Lighthouse and performance profilers to identify bottlenecks, then applying techniques like code-splitting, memoization, and server-side rendering to improve metrics. At Kasra this produced a 25% faster initial load and Core Web Vitals 'Green'."
          },
          {
             "question": "What is your approach to mentorship?",
-            "answer": "I believe in 'leading by doing'. I support junior developers through pair programming, constructive code reviews, and knowledge-sharing sessions to help them level up their skills."
+            "answer": "I believe in 'leading by doing'. I support developers through pair programming, constructive code reviews, and weekly knowledge-sharing sessions on advanced React patterns and AI tooling."
          }
       ]
    },

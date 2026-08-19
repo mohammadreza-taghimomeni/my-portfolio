@@ -2,59 +2,72 @@
    {
       "slug": "nexus",
       "title": "Nexus",
-      "category": "Enterprise Communication Platform",
-      "description": "A real-time enterprise collaboration platform built to unify internal communication and workflows.",
+      "category": "Enterprise Collaboration Suite",
+      "description": "An all-in-one enterprise collaboration workspace — team chat, work calendar, video meetings, tasks, tickets and AI-generated meeting recaps — serving 30,000+ active users.",
       "role": "Frontend Chapter Lead",
-      "startDate": "2024-03",
+      "startDate": "2023-04",
       "endDate": "Present",
-      "about": "Nexus is a large-scale enterprise platform focused on real-time communication and productivity. The system heavily relies on WebSocket-based architecture to synchronize data across web and desktop clients.",
+      "about": "Nexus is a B2B SaaS collaboration workspace: think Slack, Google Calendar, Zoom and Asana combined into one enterprise tool, with AI meeting recaps on top. The frontend is a Module Federation micro-frontend estate of 6+ independently deployable modules, with offline-first data access and socket-based real-time synchronisation across web and Electron desktop clients.",
       "responsibilities": [
          "Designed and implemented real-time features using WebSockets",
          "Led frontend architecture for web and Electron-based desktop applications",
-         "Built scalable state management for real-time data synchronization",
-         "Ensured performance and consistency across platforms",
-         "Collaborated closely with backend teams on real-time communication protocols"
+         "Owned the frontend architecture for the rebuild of the collaboration suite serving 30,000+ active users",
+         "Split the product into a Module Federation micro-frontend estate of 6+ independently deployable modules",
+         "Built offline-first data access with Zustand, TanStack Query and IndexedDB",
+         "Designed a deep-linking system spanning 6 modules (Calendar, Task, Chat, Home, Recap, Drive)",
+         "Introduced the company's first Playwright end-to-end suite and held unit coverage above 60% with Jest and React Testing Library",
+         "Built the AI meeting-recap experience, a post-meeting summary page distributed to attendees by link",
+         "Set frontend standards and code-review practice adopted across the company's ~15 frontend engineers"
       ],
       "technologies": [
          "React",
          "Next.js",
-         "Electron",
-         "Zustand",
-         "WebSockets",
-         "Playwright",
          "TypeScript",
+         "Module Federation",
+         "Zustand",
+         "TanStack Query",
+         "IndexedDB",
+         "WebSockets",
+         "Electron",
+         "Playwright",
+         "Docker",
+         "Redux.js",
          "ASP.NET Core",
          "PostgreSQL",
          "Redis",
          "OAuth 2.0"
       ],
       "highlights": [
-         "Enterprise-scale real-time system",
-         "WebSocket-driven architecture",
-         "Cross-platform (Web + Desktop)"
+         "Micro-frontend architecture (Module Federation)",
+         "Offline-first, real-time collaboration",
+         "30,000+ active users"
       ],
       "banner": "/projects/nexus/banner.png",
       "achievements": [
          {
-            "metric": "35%",
-            "title": "Faster Turnaround",
-            "description": "Projects saw significantly faster completion due to real-time tools."
+            "metric": "40%",
+            "title": "Lower Data-Fetch Latency",
+            "description": "Offline-first rebuild using Zustand, TanStack Query and IndexedDB."
          },
          {
-            "metric": "90%",
-            "title": "User Adoption",
-            "description": "Achieved across 5 distinct departments in two weeks."
+            "metric": "30%",
+            "title": "Faster Deploys",
+            "description": "Module Federation split into 6+ independently deployable modules, removing cross-team release dependencies."
          },
          {
-            "metric": "Real-time",
-            "title": "WebSocket Sync",
-            "description": "Synchronized data across web and desktop clients."
+            "metric": "300+",
+            "title": "AI Recaps / Month",
+            "description": "Post-meeting summary pages generated internally every month, removing manual note-taking."
          }
       ],
       "architecture": [
          {
             "label": "FRONTEND FRAMEWORK",
-            "value": "React & Electron"
+            "value": "React, Next.js & Electron"
+         },
+         {
+            "label": "FRONTEND ARCHITECTURE",
+            "value": "Module Federation micro-frontends (6+ modules)"
          },
          {
             "label": "BACKEND API",
@@ -108,25 +121,28 @@
    },
    {
       "slug": "alkafeel",
-      "title": "Alkafeel HR Platform",
-      "category": "Enterprise HR System",
-      "description": "A modular HR management system built using a micro-frontend architecture.",
-      "role": "Frontend Developer",
+      "title": "Alkafeel ERP Ecosystem",
+      "category": "Enterprise ERP / HR Platform",
+      "description": "A modular ERP covering HR and administrative workflows, built as a Vue.js micro-frontend estate deployed independently by 5+ teams.",
+      "role": "Senior Frontend Developer",
       "startDate": "2025-03",
-      "endDate": "2025-08",
-      "about": "Contributed to an enterprise HR system developed with Vue.js and micro-frontend architecture across multiple teams.",
+      "endDate": "2025-11",
+      "about": "An enterprise ERP ecosystem for HR and administrative operations, built with Vue.js and Module Federation so that each team ships its own modules without a coordinated release. The work replaced email approval chains and manual data re-entry with in-app submission, automated approval routing and real-time SignalR notifications.",
       "responsibilities": [
-         "Developed independent micro-frontend modules using Vue.js",
-         "Collaborated with three frontend teams on system integration",
-         "Implemented RTL-first layouts for Arabic users",
-         "Maintained UI consistency across distributed deployments"
+         "Developed a Vue.js Module Federation architecture enabling independent deployments for 5+ teams, eliminating cross-team release dependencies and system-wide downtime",
+         "Automated HR and administrative request workflows, replacing email chains and manual data re-entry with in-app submission and automated approval routing",
+         "Delivered real-time SignalR notifications for approvals and company-wide announcements",
+         "Built 50+ admin and back-office screens covering request forms, approval queues, permission-aware data tables and role-based views",
+         "Implemented RTL-first layouts for Arabic users and maintained UI consistency across distributed deployments"
       ],
       "liveLink": "https://alkafeel.net/?lang=pr",
       "technologies": [
          "Vue.js",
          "Micro-Frontend Architecture",
          "Module Federation",
-         "JavaScript"
+         "SignalR",
+         "JavaScript",
+         "RTL & i18n"
       ],
       "highlights": [
          "Vue.js at enterprise scale",
@@ -151,19 +167,36 @@
             "description": "Employee leaves management interface for tracking and approving leave requests."
          }
       ],
-      "achievements": []
+      "achievements": [
+         {
+            "metric": "5+",
+            "title": "Teams Deploying Independently",
+            "description": "Module Federation removed cross-team release dependencies and system-wide downtime."
+         },
+         {
+            "metric": "50+",
+            "title": "Admin Screens Built",
+            "description": "Request forms, approval queues, permission-aware data tables and role-based views."
+         },
+         {
+            "metric": "Real-time",
+            "title": "SignalR Notifications",
+            "description": "Approval updates and company-wide announcements pushed the moment they happen."
+         }
+      ]
    },
    {
       "slug": "landlogic",
       "title": "LandLogic",
       "category": "GovTech / Geospatial Platform",
       "description": "A geospatial web platform used by Canadian municipalities for land-use planning and permit issuance.",
-      "role": "Senior Frontend Developer",
+      "role": "Frontend Developer",
       "startDate": "2023-07",
       "endDate": "2024-02",
-      "about": "Worked on a complex map-based system handling large-scale geospatial data and dynamic reporting.",
+      "about": "A map-based planning system handling large-scale geospatial data and dynamic reporting. The frontend renders 10,000+ simultaneous map layers in Mapbox GL JS — replacing a viewer that stalled past a few hundred — and assembles planning documents of 150+ pages from live data feeds.",
       "responsibilities": [
-         "Implemented Mapbox GL to render over 2,000 geospatial layers",
+         "Rendered 10,000+ simultaneous map layers in Mapbox GL JS with custom performance optimizations, replacing a viewer that stalled past a few hundred",
+         "Built a data-driven reporting engine generating 150+ page geospatial reports from live data feeds",
          "Developed parcel-based dynamic reporting pages",
          "Optimized rendering and state management for large datasets",
          "Collaborated with cross-functional teams in an Agile environment"
@@ -171,7 +204,7 @@
       "technologies": [
          "React",
          "TypeScript",
-         "Mapbox GL",
+         "Mapbox GL JS",
          "Redux Toolkit",
          "Ant Design",
          "Docker",
@@ -192,7 +225,7 @@
          {
             "src": "/projects/landlogic/load-mapbox-layers.png",
             "label": "Mapbox Layers",
-            "description": "Dynamic rendering of over 2,000 geospatial layers using Mapbox GL."
+            "description": "Dynamic rendering of large geospatial layer sets using Mapbox GL JS."
          },
          {
             "src": "/projects/landlogic/show-layers-detail.png",
@@ -217,19 +250,19 @@
       ],
       "achievements": [
          {
-            "metric": "2,000+",
-            "title": "Geospatial Layers",
-            "description": "Successfully rendered over 2,000 geospatial layers with Mapbox GL."
+            "metric": "10,000+",
+            "title": "Simultaneous Map Layers",
+            "description": "Rendered in Mapbox GL JS with custom optimizations, cited by the client as the key technical win of the engagement."
          },
          {
-            "metric": "100%",
-            "title": "Reporting Accuracy",
-            "description": "Achieved 100% accuracy in dynamic reporting for land-use planning."
+            "metric": "150+",
+            "title": "Page Reports Generated",
+            "description": "A reporting engine assembling planning documents from live data feeds, replacing manual compilation in permit reviews."
          },
          {
             "metric": "Government-Grade",
             "title": "Security & Compliance",
-            "description": "Ensured the platform met stringent government security and compliance standards."
+            "description": "Built to meet municipal security and compliance requirements."
          }
       ]
    },
@@ -277,8 +310,8 @@
       "about": "Worked across multiple teams to build and customize complex form-driven workflows.",
       "responsibilities": [
          "Customized Alibaba Formily for enterprise-grade forms",
-         "Collaborated with cross-functional teams",
-         "Helped reduce manual paperwork by approximately 75%"
+         "Built form-driven workflows with cross-functional teams",
+         "Replaced paper-based processes with in-app submission, reducing manual paperwork by roughly 75%"
       ],
       "technologies": ["React", "TypeScript", "Redux Toolkit", "LESS", "Scrum"],
       "banner": "/projects/marine/banner.png",
